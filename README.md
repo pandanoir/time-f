@@ -1,4 +1,7 @@
 # time-f
+
+[![Build Status](https://travis-ci.org/pandanoir/time-f.svg?branch=master)](https://travis-ci.org/pandanoir/time-f)
+
 This library provides a function.The function, `time()`, converts arguments into a time based value.
 
 # Usage
