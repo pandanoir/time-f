@@ -1,13 +1,11 @@
-export const typeDic = new Map();
-for (const type of ['day', 'hour', 'minute', 'second']) {
-    typeDic.set(type[0], type);
-    typeDic.set(type, type);
-    typeDic.set(type.slice(0, 3), type);
-    typeDic.set(`${type}s`, type);
+export const typeDic = {};
+for (let types = ['day', 'hour', 'minute', 'second'], i = 0, _i = types.length; i < _i; i++) {
+    const type = types[i];
+    typeDic[type[0]] = typeDic[type] = typeDic[type.slice(0, 3)] = typeDic[`${type}s`] = type;
 }
-for (const sec of ['s','sec','second','seconds']) {
-    typeDic.set(`m{sec}`, 'millisecond');
-    typeDic.set(`milli{sec}`, 'millisecond');
+for (let secs = ['s','sec','second','seconds'], i = 0, _i = secs.length; i < _i; i++) {
+    const sec = secs[i];
+    typeDic['m' + sec] = typeDic['milli' + sec] = 'millisecond';
 }
 
 export const msecPer = {

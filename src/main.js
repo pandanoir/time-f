@@ -16,15 +16,15 @@ const time = (...args) => {
                 .split(' ');
 
             let res = 0;
-            for (const term of terms) {
+            for (let i = 0, _i = terms.length; i < _i; i++) {
                 // '3day' separate into [3, 'day']
-                const trans = str => `${str[0]}(?:${str.slice(1,3)}(?:${str.slice(3)}s?)?)?`;
-                const [, _num, _type] = term.match(
+                const trans = str => str[0] + '(?:' + str.slice(1,3) + '(?:' + str.slice(3) + 's?)?)?';
+                const matched = terms[i].match(
                     new RegExp(
-                        String.raw`(\d+)(${['day','hour','minute','second'].map(trans).join('|')}||m(?:illi)?${trans('second')})`
+                        '(\\d+)(' + ['day','hour','minute','second'].map(trans).join('|') + '||m(?:illi)?' + trans('second') + ')'
                     ));
-                const type = typeDic.get(_type);
-                const num = parseInt(_num, 10);
+                const type = typeDic[matched[2]];
+                const num = parseInt(matched[1], 10);
 
                 res += num * msecPer[type];
             }

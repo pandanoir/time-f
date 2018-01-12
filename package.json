@@ -9,13 +9,20 @@
     "postversion": "git push && git push --tags",
     "pretest": "npm run build",
     "test": "mocha -R spec",
-    "build": "rollup src/main.js -c -o dist/time-f.js --name time"
+    "build": "rollup src/main.js -c -o dist/time-f.js --name time",
+    "minify": "gulp js"
   },
   "keywords": [],
   "author": "Naoto Ikuno <moon_in_france@yahoo.co.jp>",
   "license": "MIT",
   "devDependencies": {
+    "google-closure-compiler": "20180101.0.0",
+    "gulp": "3.9.1",
     "mocha": "4.1.0",
-    "rollup": "0.53.4"
-  }
+    "rollup": "0.53.4",
+    "rollup-stream": "1.24.1",
+    "vinyl-buffer": "1.0.1",
+    "vinyl-source-stream": "2.0.0"
+  },
+  "dependencies": {}
 }
