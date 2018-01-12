@@ -12,6 +12,13 @@
     "build": "rollup src/main.js -c -o dist/time-f.js --name time",
     "minify": "gulp js"
   },
+  "files": [
+    "dist",
+    "test",
+    "LICENCE",
+    "package.json",
+    "README.md"
+  ],
   "keywords": [],
   "author": "Naoto Ikuno <moon_in_france@yahoo.co.jp>",
   "license": "MIT",
