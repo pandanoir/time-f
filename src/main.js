@@ -1,5 +1,5 @@
 import {typeDic, msecPer} from './const.js';
-export default (...args) => {
+const time = (...args) => {
     // time(sec) returns sec * 1000.
     // time(string) returns parsed time.
     // time(min, sec) returns (min * 60 + sec) * 1000.
@@ -38,4 +38,10 @@ export default (...args) => {
             return ((args[0] * 60 + args[1]) * 60 + args[2]) * 1000;
     }
     throw new Error('an unexpected argument was given.');
-}
+};
+time.second = sec => time(sec);
+time.sec = time.second;
+time.minute = minute => time(minute, 0);
+time.min = time.minute;
+time.hour = hour => time(hour, 0, 0);
+export default time;
