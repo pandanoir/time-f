@@ -36,11 +36,12 @@ Even `time('1day')` is more human-readable than `8.64e+7`. It goes without sayin
 
 example string:
 
-```
-"1hour 2minutes 3seconds"
-"1h 2m 3s"
-"1hour 2min 3sec"
-"    1Hour     2MIN      3seC"
+```javascript
+// below values are same!
+time('1hour 2minutes 3seconds');
+time('1h 2m 3s');
+time('1hour 2min 3sec');
+time('    1Hour     2MIN      3seC');
 ```
 
 ## time(number)
