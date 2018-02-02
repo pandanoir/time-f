@@ -8,7 +8,7 @@
     "version": "npm run build && gulp && git add -A",
     "postversion": "git push && git push --tags",
     "pretest": "npm run build",
-    "test": "mocha -R spec",
+    "test": "jest",
     "build": "rollup src/main.js -c -o dist/time-f.js --name time",
     "minify": "gulp js"
   },
@@ -25,6 +25,7 @@
   "devDependencies": {
     "google-closure-compiler": "20180101.0.0",
     "gulp": "3.9.1",
+    "jest": "22.1.4",
     "mocha": "4.1.0",
     "rollup": "0.53.4",
     "rollup-stream": "1.24.1",
