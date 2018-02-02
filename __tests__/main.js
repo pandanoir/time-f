@@ -16,10 +16,26 @@ describe('time', () => {
     it('should parse a string regardless of uppercase aand lowercase.', () => {
         assert.equal(time('3HouR 5miN 10sEC'), 1.111e+7);
     });
-    it('should take 1 to 3 arguments', () => {
+    it('should take 1 to 3 arguments.', () => {
         assert.equal(time(30), 30000);
         assert.equal(time(3, 30), 210000);
         assert.equal(time(1, 30, 50), ((1*60 + 30)*60 + 50) * 1000);
+    });
+    it('should throw an error when given 4 arguments.', () => {
+        assert.throws(() => {
+            time(1, 2, 3, 4);
+        });
+    });
+    it('should throw an error when given invalid arguments.', () => {
+        assert.throws(() => {
+            time({});
+        });
+        assert.throws(() => {
+            time(1, 'foo');
+        });
+        assert.throws(() => {
+            time(1, 2, 'foo');
+        });
     });
     describe('.sec()', () => {
         it('should return the value in milliseconds', () => {

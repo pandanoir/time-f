@@ -9,6 +9,8 @@
     "postversion": "git push && git push --tags",
     "pretest": "npm run build",
     "test": "jest",
+    "precoverage": "npm run build",
+    "coverage": "jest --coverage",
     "build": "rollup src/main.js -c -o dist/time-f.js --name time",
     "minify": "gulp js"
   },
