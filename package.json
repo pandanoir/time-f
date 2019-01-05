@@ -25,14 +25,14 @@
   "author": "Naoto Ikuno <moon_in_france@yahoo.co.jp>",
   "license": "MIT",
   "devDependencies": {
-    "google-closure-compiler": "20180101.0.0",
-    "gulp": "3.9.1",
-    "jest": "22.1.4",
-    "mocha": "4.1.0",
-    "rollup": "0.53.4",
-    "rollup-stream": "1.24.1",
-    "vinyl-buffer": "1.0.1",
-    "vinyl-source-stream": "2.0.0"
+    "google-closure-compiler": "^20181210.0.0",
+    "gulp": "^4.0.0",
+    "jest": "^23.6.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.0.1",
+    "rollup-stream": "^1.24.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {}
 }

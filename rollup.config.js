@@ -4,4 +4,4 @@ export default {
     output: {
         format: 'umd'
     }
-}
+};
